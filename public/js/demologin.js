@@ -4,8 +4,8 @@ import { handleErrors } from "./errors.js";
 loginForm.addEventListener("submit_demo", async (e) => {
   e.preventDefault();
   const formData = new FormData(loginForm);
-  const email = "demo@aa.io";
-  const password = "password";
+  const email = formData.get("email");
+  const password = formData.get("password");
   const body = { email, password };
 
   try {
